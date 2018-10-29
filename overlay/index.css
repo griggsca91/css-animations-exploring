@@ -1,0 +1,47 @@
+.container {
+    height: 100%;
+    background: green;
+}
+
+.overlay {
+    background: blue;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.overlay.hide {
+    top: 100%;
+    animation-duration: 1s;
+    animation-name: slideout;
+}
+
+.overlay.overlay-display {
+    top: 0;
+    animation-duration: 1s;
+    animation-name: slidein;
+}
+
+.content-to-hide {
+    background: orange;
+    height: 100%;
+}
+
+@keyframes slidein {
+    from {
+        top: 100%;
+    }
+    to {
+        top: 0px;
+    }
+}
+
+@keyframes slideout {
+    from {
+        top: 0%;
+    }
+    to {
+        top: 100%;
+    }
+}
